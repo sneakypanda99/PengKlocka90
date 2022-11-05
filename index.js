@@ -50,7 +50,7 @@ const startAutoUpdater = (squirrelUrl) => {
 
   // Display a success message on successful update
   electron.autoUpdater.addListener("update-downloaded", (event, releaseNotes, releaseName) => {
-    electron.dialog.showMessageBox({"message": `The release ${releaseName} has been downloaded`});
+    autoUpdater.quitAndInstall()
   });
 
   // Display an error message on update error
