@@ -3,7 +3,7 @@
   "version": "1.0.1",
   "description": "PengKlocka90",
   "main": "index.js",
-  
+  "repository": "github:sneakypanda99/PengKlocka90",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron --enable-transparent-visuals .",
