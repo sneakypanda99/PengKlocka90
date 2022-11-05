@@ -4,8 +4,10 @@ const { ipcMain, Tray, app, BrowserWindow } = require("electron");
 var isDev = require('electron-is-dev')
 const path = require("path");
 const setupEvents = require('./installers/setupEvents')
-require('update-electron-app')()
-
+require('update-electron-app')({
+  repo: 'sneakypanda99/PengKlocka90',
+  updateInterval: '1 hour',
+})
 
 if (setupEvents.handleSquirrelEvent()) {
    // squirrel event handled and app will exit in 1000ms, so don't do anything else
