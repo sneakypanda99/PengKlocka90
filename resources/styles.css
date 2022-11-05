@@ -33,6 +33,11 @@ h4 {
     padding-right: 5px;
     width: 80px;
 }
+.gray {
+    color:gray;
+    font-size: 10px;
+    margin-bottom: 0.2rem;
+}
 .btn:nth-of-type(1) {
     margin-right: 5px;
     background-color: rgb(230, 92, 92);
