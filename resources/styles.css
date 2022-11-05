@@ -1,0 +1,78 @@
+.main {
+    
+    background-color: #0D1821;
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    color:#F0F4EF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:0px;
+    text-align: center;
+    }
+h2 {
+    margin:0;
+    margin-top:2px;
+    font-style: italic;
+    padding:0;
+}
+
+h4 {
+    margin:0;
+    padding:0;
+}
+.buttons {
+    margin-top: 1rem;
+}
+.btn {
+    padding: 6px;
+    border: none;
+    background-color: white;
+    color:black;
+    cursor: pointer;
+    padding-left: 5px;
+    padding-right: 5px;
+    width: 80px;
+}
+.btn:nth-of-type(1) {
+    margin-right: 5px;
+    background-color: rgb(230, 92, 92);
+    color:white;
+
+}
+.btn:nth-of-type(2) {
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.btn:nth-of-type(3) {
+    margin-left: 5px;
+}
+.btn:focus {
+    outline: none;
+}
+.flex {
+    margin:1rem;
+    margin-top: 3rem;
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    
+
+}
+
+.flexItem {
+    margin-bottom:1rem;
+    flex: 1 1 33%;
+
+}
+.flexItem img {
+    width: 50px;
+    height: 50px;
+}
+
+a {
+    position: absolute;
+    bottom:20px;
+    color: #F0F4EF !important;
+}

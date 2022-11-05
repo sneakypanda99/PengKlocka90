@@ -1,0 +1,27 @@
+{
+  "name": "PengKlocka90",
+  "version": "1.0.1",
+  "description": "PengKlocka90",
+  "main": "index.js",
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron --enable-transparent-visuals .",
+    "package-mac": "electron-packager . --overwrite --asar=true --platform=darwin --arch=x64 --icon=./icon.icns --prune=true --out=release-builds",
+    "package-win": "electron-packager . --overwrite  --platform=win32 --arch=x64 --icon=./shrek.ico --electron-version=3.0.10 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"PengKlocka90\"",
+    "package-linux": "electron-packager . --overwrite --asar=true --platform=linux --arch=x64 --icon=assets/icons/png/1024x1024.png --prune=true --out=release-builds",
+    "create-installer-mac": "electron-installer-dmg ./release-builds/Electron\\ tutorial\\ app-darwin-x64/Electron\\ tutorial\\ app.app electron-tutorial-app --out=release-builds --overwrite --icon=assets/icons/mac/icon.icns",
+    "create-installer-win": "node installers/windows/createinstaller.js",
+    "benzon-install": "electron-packager . --overwrite  --platform=win32 --arch=x64 --icon=./shrek.ico --electron-version=3.0.10 --prune=true --out=release-builds --version-string.CompanyName=CE --version-string.FileDescription=CE --version-string.ProductName=\"PengKlocka90\" && node installers/windows/createinstaller.js"
+  },
+  "author": "VPL Thörnblom",
+  "license": "MIT",
+  "dependencies": {
+    "electron-is-dev": "^2.0.0",
+    "electron-tray-window": "^1.2.2",
+    "update-electron-app": "^2.0.1"
+  },
+  "devDependencies": {
+    "electron-winstaller": "^5.1.0"
+  }
+}
