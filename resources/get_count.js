@@ -1,4 +1,3 @@
-const ipc = require("electron").ipcRenderer;
 const moneyId = document.getElementById("money");
 const cheesId = document.getElementById("chees");
 const snusId = document.getElementById("snus");
@@ -10,13 +9,14 @@ const beerId = document.getElementById("beer");
 const btn1 = document.getElementById("btn1")
 const btn2 = document.getElementById("btn2")
 
-function getFirstDayOfWeek(d) {
-  const date = new Date(d);
-  const day = date.getDay();
-  const diff = date.getDate() - day;
-
-  return new Date(date.setDate(diff));
+function getMonday(d) {
+  const date = new Date();
+  const today = date.getDate();
+  const currentDay = date.getDay();
+  const newDate = date.setDate(today - (currentDay || 7));
+  return new Date(newDate);
 }
+
 
 function getWeeksDiff(startDate, endDate) {
   const msInWeek = 1000 * 60 * 60 * 24 * 7;
@@ -33,7 +33,7 @@ var timeVar = "today"
 window.start = new Date();
 window.start.setHours(0,0,0,0)
 window.startDate = new Date("2022-08-08");
-window.startDate2 = getFirstDayOfWeek(new Date())
+window.startDate2 = getMonday(new Date())
 
 var timer = setInterval(callAPI, 1000);
 
@@ -50,7 +50,7 @@ function callAPI() {
   if(!isToday(window.start)) {
     window.start = new Date();
     window.start.setHours(0,0,0,0)
-    window.startDate2 = getFirstDayOfWeek(new Date())
+    window.startDate2 = getMonday(new Date())
   }
 
 
